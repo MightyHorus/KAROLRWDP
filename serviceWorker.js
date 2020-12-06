@@ -8,15 +8,7 @@
 const cacheName = `Projekt końcowy PWA`;
 const filesToCache = [
     `./`,
-    `index.html`,
-    `resources/css/main.css`,
-    `resources/images/clock-face.svg`,
-    `resources/js/main.js`,
-    `resources/js/component/clock.js`,
-    `vendors/font/PTSans-Bold.ttf`,
-    `vendors/font/PTSans-Bold.woff2`,
-    `vendors/font/PTSans-Regular.ttf`,
-    `vendors/font/PTSans-Regular.woff2`,
+    `index.html`
 ];
 
 /**
