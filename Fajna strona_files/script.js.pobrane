@@ -1,0 +1,30 @@
+function clock() {
+    const date = new Date(); /* creating object of Date class */
+    const hour = updateTime(date.getHours());
+    const minutes = updateTime(date.getMinutes());
+    const seconds = updateTime(date.getSeconds());
+    document.getElementById("clock").innerText = `${hour} : ${minutes} : ${seconds}`;
+}
+
+function updateTime(time) {
+    if (time < 10) {
+        return `0${time}`;
+    }
+    else {
+        return time;
+    }
+}
+
+window.onload = function () {
+    setInterval(clock, 1000);
+
+    window.addEventListener('deviceorientation', event => {
+        let x = event.alpha;
+        let y = event.beta;
+        let z = event.gamma;
+
+        const tekst = `X: ${x}, Y:${y}, Z:${z}`;
+        console.log(tekst);
+        document.getElementById('orientation').innerText = tekst;
+    });
+}
